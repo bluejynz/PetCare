@@ -5,6 +5,7 @@ table{
   border-radius: 10px;
   border: 5px dotted #B8C3FF;
   color: rgb(14, 37, 85);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 thead tr th{
@@ -20,10 +21,24 @@ tbody .name, thead .name{
 
 tbody tr th{
   font-weight: normal;
-  padding: 5px 10px 0 0;
+  padding: 5px 20px 10px 0;
 }
 
 th{
   padding: 10px;
 }
 
+.details{
+  color: rgb(14, 37, 85);
+  text-decoration: none;
+  padding: 3px 5px;
+  border-radius: 5px;
+  border: 2px solid #B8C3FF;
+  box-shadow: 2px 2px 2px rgba(89, 105, 139, 0.5);
+}
+
+.details:hover{
+  background-color: #B8C3FF;
+  border: 2px solid rgb(14, 37, 85);
+  font-weight: bold;
+}

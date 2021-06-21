@@ -1,31 +1,23 @@
 .container {
+  position: relative;
+  width: 100%;
+}
+.container h1{
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 36px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    height: 26px;
+    padding: 0;
+    margin: 0;
+    margin-top: -13px;
+    text-align: center;
+    color: rgb(14, 37, 85);
 }
-
-@media (min-width: 576px) {
-    .container {
-      max-width: 540px;
-    }
-}
-  
-@media (min-width: 768px) {
-    .container {
-      max-width: 720px;
-    }
-}
-  
-@media (min-width: 992px) {
-    .container {
-      max-width: 960px;
-    }
-}
-  
-@media (min-width: 1200px) {
-    .container {
-      max-width: 1140px;
-    }
+.container img{
+    z-index: 1;
+    width: 100%;
 }
