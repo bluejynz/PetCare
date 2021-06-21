@@ -1,6 +1,6 @@
 # PetCare Website :dog: :cat:
 
 
-[X] - React
-[X] - Axios
-[X] - Router
+- [X] React
+- [X] Axios
+- [X] Router
