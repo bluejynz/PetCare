@@ -1,4 +1,4 @@
-import axios from "axios";
+import http from "../Http";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -7,7 +7,7 @@ const Produto = () => {
     const [product, setProduct] = useState({});
 
     useEffect(() => {
-        axios.get('http://localhost:8000/produtos/' + id)
+        http.get('produtos/' + id)
             .then(response => setProduct(response.data))
     }, [id]);
 

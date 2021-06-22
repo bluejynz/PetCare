@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import http from "../Http";
 import { Link } from 'react-router-dom';
 
 import ItemTable from "../ItemTable";
@@ -13,7 +13,7 @@ const ContainerProdutos = () => {
     }, []);
 
     const getProducts = () => {
-        axios.get("http://localhost:8000/produtos")
+        http.get("produtos")
             .then(response => {
                 setProducts(response.data);
             });

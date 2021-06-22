@@ -6,6 +6,8 @@ import Servicos from './Paginas/Servicos';
 import Page404 from './Paginas/Page404';
 import Produto from "./Paginas/Produto";
 import Servico from "./Paginas/Servico";
+import Cadastro from "./Paginas/Cadastro/index.jsx";
+import Login from "./Paginas/Login/index.jsx";
 
 import './App.css';
 
@@ -30,6 +32,12 @@ function App() {
         </Route>
         <Route path="/servico/:id">
           <Servico />
+        </Route>
+        <Route path="/cadastrar">
+          <Cadastro />
+        </Route>
+        <Route path="/login">
+          <Login />
         </Route>
         <Route>
           <Page404 />

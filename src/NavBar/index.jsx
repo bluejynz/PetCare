@@ -23,6 +23,7 @@ const NavBar = () => {
                 <Link className="nav-link" to="/servicos">Serviços</Link>
             </li>
         </ul>
+        <Link to="/cadastrar"><button className="btnLogin">Login | Cadastro</button></Link>
     </nav>
 }
 

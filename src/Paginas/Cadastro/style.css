@@ -1,0 +1,49 @@
+.link-login{
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
+
+span.link{
+    text-decoration: underline;
+}
+
+span:hover.link{
+    
+  text-shadow: 2px 2px 2px rgba(89, 105, 139, 0.5);
+}
+
+.form-line, .link-login{
+    margin-bottom: 8px;
+}
+
+button{
+    margin: 5px auto;
+    padding: 8px 10px;
+    border-radius: 8px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid rgb(14, 37, 85);
+    box-shadow: 2px 2px 2px rgba(89, 105, 139, 0.5);
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: rgb(14, 37, 85);
+    color: white;
+}
+
+.main-div {
+    text-align: center;
+    color: rgb(14, 37, 85);
+}
+
+input{
+    padding: 5px 8px;
+    border-radius: 5px;
+    border: 2px solid rgb(14, 37, 85);
+}
+
+input:focus{
+    outline: 1px solid #aae4ff;
+}
