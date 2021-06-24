@@ -11,12 +11,31 @@ import Login from "./Paginas/Login/index.jsx";
 
 import './App.css';
 
+import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 function App() {
+
+  const [token, setToken] = useState('');
+
+  useEffect(() => {
+    const tokenAntigo = localStorage.getItem('token')
+    if (tokenAntigo) {
+      setToken(tokenAntigo)
+    }
+  }, [])
+
+  const onLogin = (token) => {
+    setToken(token);
+  }
+
+  const logout = () => {
+    setToken('');
+  }
+
   return (
     <BrowserRouter>
-      <NavBar />
+      <NavBar token={token} onLogout={logout} />
       <Switch>
         <Route exact path="/">
           <Home />
@@ -37,7 +56,7 @@ function App() {
           <Cadastro />
         </Route>
         <Route path="/login">
-          <Login />
+          <Login onLogin={onLogin} />
         </Route>
         <Route>
           <Page404 />

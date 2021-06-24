@@ -1,12 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+
 import http from "../../Http";
+
 import '../Cadastro/style.css';
 
-const Login = () => {
+const Login = ({ onLogin }) => {
+    
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
+    const history = useHistory();
+
+    useEffect(() => {
+        localStorage.removeItem('token');
+    }, []);
 
     const onSubmit = (event) => {
+
         event.preventDefault();
 
         const user = {
@@ -18,6 +28,11 @@ const Login = () => {
             .then(response => {
                 console.log(response.data.access_token);
                 localStorage.setItem('token', response.data.access_token);
+                localStorage.setItem('user', response.data.user);
+                onLogin(response.data.user, response.data.token);
+                history.push('/')
+                setEmail('');
+                setPass('');
             })
             .catch(error => {
                 console.log(error);

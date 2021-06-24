@@ -11,8 +11,7 @@ const Cadastro = () => {
     const [pass, setPass] = useState("");
 
     const onSubmit = (event) => {
-        event.preventDefault();
-
+        
         const user = {
             name: name,
             email: email,
@@ -21,7 +20,7 @@ const Cadastro = () => {
 
         http.post("auth/register", user)
             .then(response => {
-                console.log(user);
+                console.log(response.data.message);
             })
             .catch(error => {
                 console.log(error);
